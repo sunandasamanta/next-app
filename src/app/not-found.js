@@ -14,7 +14,7 @@ export default function NotFound() {
         alt="puppy-error"
       />
       <p>
-        Go back <Link href="/home">
+        Go back <Link href="/">
           <button className="p-2 rounded text-white font-medium bg-blue-400 my-3">
             home
           </button>
