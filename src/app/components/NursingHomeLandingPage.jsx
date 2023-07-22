@@ -4,9 +4,9 @@ import Link from "next/link";
 
 const NursingHomeLandingPage = () => {
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen flex flex-col px-3 py-2">
       {/* <Navbar /> */}
-      <main className="flex flex-col items-center justify-center flex-grow">
+      <main className="flex flex-col items-center justify-center flex-grow text-blue-50">
         <h1 className="text-4xl font-bold mb-4">Nursing Home Name</h1>
         <h2 className="text-2xl font-semibold mb-2">A Good Heading</h2>
         <p className="text-lg text-center max-w-md mb-8">
