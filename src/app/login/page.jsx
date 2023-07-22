@@ -1,20 +1,18 @@
 "use client"
 
 import { useState } from 'react';
+import Link from 'next/link';
 
 const LoginPage = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
   const handleLogin = () => {
-    // Add your login logic here
-    // You can use the email and password state values to perform the login action
-    // For example, you can make an API call to authenticate the user
+    console.log('Login button clicked');
   };
 
   const handleJoin = () => {
-    // Add your logic to handle the "Join" button click
-    // For example, you can redirect the user to a registration page
+    console.log('Join button clicked');
   };
 
   return (
@@ -46,18 +44,26 @@ const LoginPage = () => {
           />
         </div>
         <div className="flex justify-between">
-          <button
-            className="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
-            onClick={handleLogin}
+          <Link
+            href='/profile'
           >
-            Login
-          </button>
-          <button
-            className="bg-green-500 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
-            onClick={handleJoin}
+            <button
+              className="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
+              onClick={handleLogin}
+            >
+              Login
+            </button>
+          </Link>
+          <Link 
+            href='/register'
           >
-            Join
-          </button>
+            <button
+              className="bg-green-500 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
+              onClick={handleJoin}
+            >
+              Join
+            </button>
+          </Link>
         </div>
       </div>
     </div>
