@@ -1,11 +1,11 @@
 // pages/index.js
-import Navbar from "./Navbar";
+// import Navbar from "./Navbar";
 import Link from "next/link";
 
 const NursingHomeLandingPage = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <Navbar />
+      {/* <Navbar /> */}
       <main className="flex flex-col items-center justify-center flex-grow">
         <h1 className="text-4xl font-bold mb-4">Nursing Home Name</h1>
         <h2 className="text-2xl font-semibold mb-2">A Good Heading</h2>
