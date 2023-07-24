@@ -2,3 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.bg-pic {
+  background-image: url('./pexels-karolina-grabowska-4386466.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
