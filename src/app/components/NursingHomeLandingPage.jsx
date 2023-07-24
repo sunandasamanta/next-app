@@ -13,7 +13,7 @@ const NursingHomeLandingPage = () => {
           A Catchy Tagline - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
           vestibulum gravida nisi, quis facilisis dolor mollis ac.
         </p>
-        <p className="text-lg font-normal text-center max-w-md text-white">
+        <p className="text-lg font-normal text-center max-w-md text-gray-950">
           An Effective Paragraph - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
           vestibulum gravida nisi, quis facilisis dolor mollis ac. Sed eu mauris felis. Donec
           consectetur urna in sapien cursus, vitae fermentum purus facilisis. Curabitur
