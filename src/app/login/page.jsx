@@ -1,73 +1,66 @@
-"use client"
-
-import { useState } from 'react';
+import React from 'react';
 import Link from 'next/link';
 
-const LoginPage = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-
-  const handleLogin = () => {
-    console.log('Login button clicked');
-  };
-
-  const handleJoin = () => {
-    console.log('Join button clicked');
-  };
-
+const Login = () => {
   return (
-    <div className="flex items-center justify-center h-screen bg-gradient-to-b from-blue-400 to-white">
-      <div className="w-96 text-black p-6 bg-white rounded-lg shadow-lg">
-        <h1 className="text-2xl font-semibold mb-6">Login</h1>
-        <div className="mb-4">
-          <label htmlFor="email" className="block font-medium mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-        </div>
-        <div className="mb-6">
-          <label htmlFor="password" className="block font-medium mb-2">
-            Password
-          </label>
-          <input
-            type="password"
-            id="password"
-            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-        </div>
-        <div className="flex justify-between">
-          <Link
-            href='/profile'
-          >
-            <button
-              className="bg-blue-500 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-blue-600"
-              onClick={handleLogin}
+    <div className="min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="max-w-md w-full p-6 bg-white rounded-lg shadow-lg">
+        <h2 className="text-3xl font-semibold mb-4">Login</h2>
+        <form>
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-600">
+              Email Address
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+              placeholder="example@example.com"
+              required
+            />
+          </div>
+          <div className="mb-4">
+            <label htmlFor="password" className="block text-gray-600">
+              Password
+            </label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              className="w-full p-2 border border-gray-300 rounded focus:outline-none focus:border-indigo-500"
+              placeholder="********"
+              required
+            />
+          </div>
+          <div className="flex gap-6 justify-between font-medium">
+            <Link
+              href="/profile"
+              className="w-1/2"
             >
-              Login
-            </button>
-          </Link>
-          <Link 
-            href='/register'
-          >
-            <button
-              className="bg-green-500 text-white py-2 px-4 rounded focus:outline-none focus:ring-2 focus:ring-green-600"
-              onClick={handleJoin}
+              <button
+                type="submit"
+                className="w-full py-2 px-4 bg-indigo-600 text-white rounded hover:bg-indigo-700 focus:outline-none focus:bg-indigo-700"
+              >
+                Log In
+              </button>
+            </Link>
+            <Link
+              href="/register"
+              className="w-1/2"
             >
-              Join
-            </button>
-          </Link>
-        </div>
+              <button
+                type="button"
+                className="w-full py-2 px-4 bg-white text-indigo-600 border border-indigo-600 rounded hover:bg-indigo-100 focus:outline-none focus:bg-indigo-100"
+              >
+                Create Account
+              </button>
+            </Link>
+          </div>
+        </form>
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default Login;
